@@ -1,0 +1,233 @@
+
+1) Посмотреть где я
+$ pwd
+/d
+----------------------------------------
+2) Создать папку
+
+$ mkdir Homework_1
+----------------------------------------
+3) Зайти в папку
+
+$ cd Homework_1
+----------------------------------------
+4) Создать 3 папки
+
+$ mkdir Homework_1_1 Homework_1_2 Homework_1_3
+----------------------------------------
+5) Зайти в любоую папку
+
+$ cd Homework_1_1
+----------------------------------------
+6) Создать 5 файлов (3 txt, 2 json)
+
+$ touch 1.txt 2.txt 3.txt 1.json 2.json
+
+7) Создать 3 папки
+
+$ mkdir 1 2 3
+----------------------------------------
+8. Вывести список содержимого папки
+
+$ ls -la
+total 4
+drwxr-xr-x 1 Елена 197609 0 Apr 14 17:19 ./
+drwxr-xr-x 1 Елена 197609 0 Apr 14 17:03 ../
+drwxr-xr-x 1 Елена 197609 0 Apr 14 17:19 1/
+-rw-r--r-- 1 Елена 197609 0 Apr 14 17:14 1.json
+-rw-r--r-- 1 Елена 197609 0 Apr 14 17:14 1.txt
+drwxr-xr-x 1 Елена 197609 0 Apr 14 17:19 2/
+-rw-r--r-- 1 Елена 197609 0 Apr 14 17:14 2.txt
+-rw-r--r-- 1 Елена 197609 0 Apr 14 17:14 2json
+drwxr-xr-x 1 Елена 197609 0 Apr 14 17:19 3/
+-rw-r--r-- 1 Елена 197609 0 Apr 14 17:14 3.txt
+----------------------------------------
+9) Открыть любой txt файл
+$ wim 1.txt
+
+10) написать туда что-нибудь, любой текст.
+
+apple1
+apple2
+apple3
+
+11) + сохранить и выйти.
+
+:wq
+
+----------------------------------------
+12) Выйти из папки на уровень выше
+
+$ cd ..
+----------------------------------------
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+
+$ mv Homework_1_1/1.txt Homework_1_1/1/1.txt
+
+$ mv Homework_1_1/1.json Homework_1_1/1/1.json
+----------------------------------------
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+
+$ cp Homework_1_1/2.txt Homework_1_1/1/2.txt
+$ cp Homework_1_1/2.txt Homework_1_2/2.txt
+----------------------------------------
+15) Найти файл по имени
+
+$ find . -name "*2.txt"
+./Homework_1_1/1/2.txt
+./Homework_1_1/2.txt
+./Homework_1_2/2.txt
+----------------------------------------
+16) просмотреть содержимое в реальном времени 
+
+$ tail -f 2.txt
+apple
+apple5
+apple6
+apple7
+apple 15
+группа 1
+
+$ grep -r apple
+Homework_1_1/1/1.txt:apple1
+Homework_1_1/1/1.txt:apple2
+Homework_1_1/1/1.txt:apple3
+Homework_1_1/2.txt:1    apple
+Homework_1_1/2.txt:2    apple5
+Homework_1_1/2.txt:3    apple6
+Homework_1_1/2.txt:4    apple7
+Homework_1_1/2.txt:5    apple 15
+Homework_1_1/2.txt:7    apple
+Homework_1_1/2.txt:8    apple5
+Homework_1_1/2.txt:9    apple6
+Homework_1_1/2.txt:10   apple7
+Homework_1_1/2.txt:11   apple 15
+Homework_1_1/2.txt:13   apple
+Homework_1_1/2.txt:14   apple5
+Homework_1_1/2.txt:15   apple6
+Homework_1_1/2.txt:16   apple7
+Homework_1_1/2.txt:17   apple 15
+Homework_1_1/2.txt:19   apple
+Homework_1_1/2.txt:20   apple5
+Homework_1_1/2.txt:21   apple6
+Homework_1_1/2.txt:22   apple7
+Homework_1_1/2.txt:23   apple 15
+
+
+----------------------------------------
+17) вывести несколько первых строк из текстового файла
+
+$ head 2.txt
+1       apple
+2       apple5
+3       apple6
+4       apple7
+5       apple 15
+6       группа 1
+7       apple
+8       apple5
+9       apple6
+10      apple7
+----------------------------------------
+18) вывести несколько последних строк из текстового файла
+
+$ tail 2.txt
+15      apple6
+16      apple7
+17      apple 15
+18      группа 1
+19      apple
+20      apple5
+21      apple6
+22      apple7
+23      apple 15
+24      группа 1
+----------------------------------------
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+
+$ less
+
+1       apple
+2       apple5
+3       apple6
+4       apple7
+5       apple 15
+6       группа 1
+7       apple
+8       apple5
+9       apple6
+10      apple7
+11      apple 15
+12      группа 1
+13      apple
+14      apple5
+15      apple6
+16      apple7
+17      apple 15
+18      группа 1
+19      apple
+20      apple5
+21      apple6
+22      apple7
+23      apple 15
+24      группа 1
+
+----------------------------------------
+20) вывести дату и время
+
+$ date
+
+
+----------------------------------------
+
+Задание *
+*************************************************************
+
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+
+Елена@DESKTOP-GDK57E0 MINGW64 /d/Homework_1
+$ curl http://162.55.220.72:5005/terminal-hw-request
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   237  100   237    0     0   1327      0 --:--:-- --:--:-- --:--:--  1331{"Intro":"Hello!! This is your the first response from server","Tasks":{"Task_1":"Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)","result":["Your_String","Your_number"]}}
+
+Елена@DESKTOP-GDK57E0 MINGW64 /d/Homework_1
+$ curl 'http://162.55.220.72:5005/get_method?name=Elena&age=30'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    15  100    15    0     0     80      0 --:--:-- --:--:-- --:--:--    80["Elena","30"]
+
+
+****************************************************************
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+#!/bin/bash
+
+cd /d/Homework_1
+mkdir Homework_1_1 Homework_1_2 Homework_1_3
+cd Homework_1_1
+touch 1.txt 2.txt 3.txt 1.json 2.json
+mkdir 1 2 3
+ls -la
+cd ..
+mv Homework_1_1/1.txt Homework_1_1/1/1.txt
+mv Homework_1_1/1.json Homework_1_1/1/1.json
+
+Результат выполнения скрипта:
+
+Елена@DESKTOP-GDK57E0 MINGW64 /d
+$ bash bash_script.sh
+total 4
+drwxr-xr-x 1 Елена 197609 0 Apr 15 21:47 .
+drwxr-xr-x 1 Елена 197609 0 Apr 15 21:47 ..
+drwxr-xr-x 1 Елена 197609 0 Apr 15 21:47 1
+-rw-r--r-- 1 Елена 197609 0 Apr 15 21:47 1.json
+-rw-r--r-- 1 Елена 197609 0 Apr 15 21:47 1.txt
+drwxr-xr-x 1 Елена 197609 0 Apr 15 21:47 2
+-rw-r--r-- 1 Елена 197609 0 Apr 15 21:47 2.json
+-rw-r--r-- 1 Елена 197609 0 Apr 15 21:47 2.txt
+drwxr-xr-x 1 Елена 197609 0 Apr 15 21:47 3
+-rw-r--r-- 1 Елена 197609 0 Apr 15 21:47 3.txt
+
